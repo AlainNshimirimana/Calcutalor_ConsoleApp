@@ -61,6 +61,11 @@ void Multiplication()
     Console.WriteLine("MULTIPLICATION");
     Console.ResetColor();
     Console.WriteLine("--------");
+    Console.Write("First number: ");
+    num1 = decimal.Parse(Console.ReadLine());
+    Console.Write("Second number: ");
+    num2 = decimal.Parse(Console.ReadLine());
+    Console.WriteLine($"{num1} × {num2} = {num1 * num2}");
     numGames++;
 }
 
@@ -70,6 +75,11 @@ void Division()
     Console.WriteLine("DIVISION");
     Console.ResetColor();
     Console.WriteLine("--------");
+    Console.Write("First number: ");
+    num1 = decimal.Parse(Console.ReadLine());
+    Console.Write("Second number: ");
+    num2 = decimal.Parse(Console.ReadLine());
+    Console.WriteLine($"{num1} ÷ {num2} = {num1 / num2}");
     numGames++;
 }
 
@@ -79,6 +89,11 @@ void Subtraction()
     Console.WriteLine("SUBTRACTION");
     Console.ResetColor();
     Console.WriteLine("--------");
+    Console.Write("First number: ");
+    num1 = decimal.Parse(Console.ReadLine());
+    Console.Write("Second number: ");
+    num2 = decimal.Parse(Console.ReadLine());
+    Console.WriteLine($"{num1} - {num2} = {num1 - num2}");
     numGames++;
 }
 
