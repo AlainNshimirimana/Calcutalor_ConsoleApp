@@ -8,6 +8,10 @@ Console.WriteLine(" CALCULATOR APP ");
 Console.WriteLine(" ------------- ");
 Console.WriteLine("Welcome to the console Calculator App. What maths operation would you like to perform?: ");
 MainMenu();
+Console.WriteLine($"The number of oparetions performed is {numGames}");
+Console.WriteLine("\nGoodbye!");
+
+Console.Read();
 
 
 void MainMenu()
@@ -20,10 +24,10 @@ void MainMenu()
     Console.WriteLine("E. Exit");
     Console.Write("> ");
     Console.ResetColor();
-    selection = Console.ReadLine().ToUpper();
+    selection = Console.ReadLine().Trim().ToUpper();
     Console.WriteLine();
 
-    while (selection.ToUpper() != "A" || selection.ToUpper() != "S" || selection.ToUpper() != "D" || selection.ToUpper() != "M" || selection.ToUpper() != "E")
+    while (selection != "A" && selection != "S" &&  selection != "D" && selection != "M" && selection != "E")
     {
         Console.WriteLine("Invalid selection. Please enter A, S, D, M, or E to exit");
         Console.ForegroundColor = ConsoleColor.Cyan;
@@ -53,20 +57,41 @@ void MainMenu()
 
 void Multiplication()
 {
-    throw new NotImplementedException();
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine("MULTIPLICATION");
+    Console.ResetColor();
+    Console.WriteLine("--------");
+    numGames++;
 }
 
 void Division()
 {
-    throw new NotImplementedException();
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine("DIVISION");
+    Console.ResetColor();
+    Console.WriteLine("--------");
+    numGames++;
 }
 
 void Subtraction()
 {
-    throw new NotImplementedException();
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine("SUBTRACTION");
+    Console.ResetColor();
+    Console.WriteLine("--------");
+    numGames++;
 }
 
 void Addition()
 {
-    throw new NotImplementedException();
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine("ADDITION");
+    Console.ResetColor();
+    Console.WriteLine("--------");
+    Console.Write("First number: ");
+    num1 = decimal.Parse(Console.ReadLine());
+    Console.Write("Second number: ");
+    num2 = decimal.Parse(Console.ReadLine());
+    Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
+    numGames++;
 }
