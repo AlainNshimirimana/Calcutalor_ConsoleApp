@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-decimal num1;
-decimal num2;
-decimal result = 0.00m;
+double num1;
+double num2;
+double result;
 int numGames = 0;
 string selection;
 List<Decimal> list = new List<Decimal>();
@@ -24,13 +24,14 @@ void MainMenu()
     Console.WriteLine("D. Division");
     Console.WriteLine("M. Multiplication");
     Console.WriteLine("R. Square Root");
+    Console.WriteLine("P. Raise to a power");
     Console.WriteLine("E. Exit");
     Console.Write("> ");
     Console.ResetColor();
     selection = Console.ReadLine().Trim().ToUpper();
     Console.WriteLine();
 
-    while (selection != "A" && selection != "S" &&  selection != "D" && selection != "M" && selection != "E" && selection != "R")
+    while (selection != "A" && selection != "S" &&  selection != "D" && selection != "M" && selection != "E" && selection != "R" && selection != "P")
     {
         Console.WriteLine("Invalid selection. Please enter A, S, D, M, or E to exit");
         Console.ForegroundColor = ConsoleColor.Cyan;
@@ -58,9 +59,28 @@ void MainMenu()
         case "R":
             SquareRoot();
             break;
+        case "P":
+            Power();
+            break;
         default:
             break;
     }
+}
+
+void Power()
+{
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine("POWER");
+    Console.ResetColor();
+    Console.WriteLine("--------");
+    Console.Write("Base: ");
+    num1 = double.Parse(Console.ReadLine());
+    Console.Write("Power: ");
+    num2 = double.Parse(Console.ReadLine());
+    result = Math.Pow(num1, num2);
+    Console.WriteLine($"{num1} × {num2} = {result}");
+    numGames++;
+    MainMenu();
 }
 
 void SquareRoot()
@@ -70,8 +90,8 @@ void SquareRoot()
     Console.ResetColor();
     Console.WriteLine("--------");
     Console.Write("Enter a number: ");
-    double num1 = double.Parse(Console.ReadLine());
-    double result = Math.Sqrt(num1);
+    num1 = double.Parse(Console.ReadLine());
+    result = Math.Sqrt(num1);
     Console.WriteLine($"√{num1} = {result}");
     numGames++;
     MainMenu();
@@ -84,11 +104,11 @@ void Multiplication()
     Console.ResetColor();
     Console.WriteLine("--------");
     Console.Write("First number: ");
-    num1 = decimal.Parse(Console.ReadLine());
+    num1 = double.Parse(Console.ReadLine());
     Console.Write("Second number: ");
-    num2 = decimal.Parse(Console.ReadLine());
+    num2 = double.Parse(Console.ReadLine());
     result = num1 * num2;
-    Console.WriteLine($"{num1} × {num2} = {result}");
+    Console.WriteLine($"{num1} × {num2} = {result:0.00}");
     numGames++;
     MainMenu();
 }
@@ -100,11 +120,11 @@ void Division()
     Console.ResetColor();
     Console.WriteLine("--------");
     Console.Write("First number: ");
-    num1 = decimal.Parse(Console.ReadLine());
+    num1 = double.Parse(Console.ReadLine());
     Console.Write("Second number: ");
-    num2 = decimal.Parse(Console.ReadLine());
+    num2 = double.Parse(Console.ReadLine());
     result = num1 / num2;
-    Console.WriteLine($"{num1} ÷ {num2} = {result}");
+    Console.WriteLine($"{num1} ÷ {num2} = {result:0.00}");
     numGames++;
     MainMenu();
 }
@@ -116,11 +136,11 @@ void Subtraction()
     Console.ResetColor();
     Console.WriteLine("--------");
     Console.Write("First number: ");
-    num1 = decimal.Parse(Console.ReadLine());
+    num1 = double.Parse(Console.ReadLine());
     Console.Write("Second number: ");
-    num2 = decimal.Parse(Console.ReadLine());
+    num2 = double.Parse(Console.ReadLine());
     result = num1 - num2;
-    Console.WriteLine($"{num1} - {num2} = {result}");
+    Console.WriteLine($"{num1} - {num2} = {result:0.00}");
     numGames++;
     MainMenu();
 }
@@ -132,11 +152,11 @@ void Addition()
     Console.ResetColor();
     Console.WriteLine("--------");
     Console.Write("First number: ");
-    num1 = decimal.Parse(Console.ReadLine());
+    num1 = double.Parse(Console.ReadLine());
     Console.Write("Second number: ");
-    num2 = decimal.Parse(Console.ReadLine());
+    num2 = double.Parse(Console.ReadLine());
     result = num1 + num2;
-    Console.WriteLine($"{num1} + {num2} = {result}");
+    Console.WriteLine($"{num1} + {num2} = {result:0.00}");
     numGames++;
     MainMenu();
 }
