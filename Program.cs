@@ -1,21 +1,19 @@
-﻿decimal num1 = 0.00m;
-decimal num2 = 0.00m;
+﻿decimal num1;
+decimal num2;
 decimal result = 0.00m;
 int numGames = 0;
 string selection;
 
 Console.WriteLine(" CALCULATOR APP ");
 Console.WriteLine(" ------------- ");
-Console.WriteLine("Welcome to the console Calculator App. What maths operation would you like to perform?: ");
+Console.WriteLine("Welcome to the console Calculator App.");
 MainMenu();
 Console.WriteLine($"The number of oparetions performed is {numGames}");
 Console.WriteLine("\nGoodbye!");
 
-Console.Read();
-
-
 void MainMenu()
 {
+    Console.WriteLine("\nWhat would you like to do?: ");
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine("A. Addition");
     Console.WriteLine("S. Subtraction");
@@ -35,6 +33,8 @@ void MainMenu()
         Console.ResetColor();
         selection = Console.ReadLine().ToUpper();
     }
+
+    Console.Clear();
 
     switch (selection)
     {
@@ -67,6 +67,7 @@ void Multiplication()
     num2 = decimal.Parse(Console.ReadLine());
     Console.WriteLine($"{num1} × {num2} = {num1 * num2}");
     numGames++;
+    MainMenu();
 }
 
 void Division()
@@ -81,6 +82,7 @@ void Division()
     num2 = decimal.Parse(Console.ReadLine());
     Console.WriteLine($"{num1} ÷ {num2} = {num1 / num2}");
     numGames++;
+    MainMenu();
 }
 
 void Subtraction()
@@ -95,6 +97,7 @@ void Subtraction()
     num2 = decimal.Parse(Console.ReadLine());
     Console.WriteLine($"{num1} - {num2} = {num1 - num2}");
     numGames++;
+    MainMenu();
 }
 
 void Addition()
@@ -109,4 +112,5 @@ void Addition()
     num2 = decimal.Parse(Console.ReadLine());
     Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
     numGames++;
+    MainMenu();
 }
