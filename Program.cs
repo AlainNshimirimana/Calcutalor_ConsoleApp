@@ -6,7 +6,7 @@ string selection;
 
 Console.WriteLine(" CALCULATOR APP ");
 Console.WriteLine(" ------------- ");
-Console.WriteLine("Welcome to the console Calculator App.");
+Console.WriteLine("Welcome to the console Calculator App. With this app you will be able to perform maths operations");
 MainMenu();
 Console.WriteLine($"The number of oparetions performed is {numGames}");
 Console.WriteLine("\nGoodbye!");
