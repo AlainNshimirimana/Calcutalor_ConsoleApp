@@ -6,7 +6,7 @@ double num2;
 double result;
 int numGames = 0;
 string selection;
-List<Decimal> list = new List<Decimal>();
+string operationType;
 
 Console.WriteLine(" CALCULATOR APP ");
 Console.WriteLine(" ------------- ");
@@ -25,6 +25,7 @@ void MainMenu()
     Console.WriteLine("M. Multiplication");
     Console.WriteLine("R. Square Root");
     Console.WriteLine("P. Raise to a power");
+    Console.WriteLine("V. View History");
     Console.WriteLine("E. Exit");
     Console.Write("> ");
     Console.ResetColor();
@@ -69,6 +70,7 @@ void MainMenu()
 
 void Power()
 {
+    operationType = "Power";
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine("POWER");
     Console.ResetColor();
@@ -85,6 +87,7 @@ void Power()
 
 void SquareRoot()
 {
+    operationType = "Square Root";
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine("SQUARE ROOT");
     Console.ResetColor();
@@ -99,6 +102,7 @@ void SquareRoot()
 
 void Multiplication()
 {
+    operationType = "Multiplication";
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine("MULTIPLICATION");
     Console.ResetColor();
@@ -115,6 +119,7 @@ void Multiplication()
 
 void Division()
 {
+    operationType = "Division";
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine("DIVISION");
     Console.ResetColor();
@@ -131,6 +136,7 @@ void Division()
 
 void Subtraction()
 {
+    operationType = "Subtraction";
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine("SUBTRACTION");
     Console.ResetColor();
@@ -147,6 +153,7 @@ void Subtraction()
 
 void Addition()
 {
+    operationType = "Addition";
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine("ADDITION");
     Console.ResetColor();
