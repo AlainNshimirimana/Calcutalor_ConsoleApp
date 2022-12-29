@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Buffers;
 using System.Collections.Generic;
 
 double num1;
@@ -25,7 +26,7 @@ void MainMenu()
     Console.WriteLine("M. Multiplication");
     Console.WriteLine("R. Square Root");
     Console.WriteLine("P. Raise to a power");
-    Console.WriteLine("V. View History");
+    Console.WriteLine("V. View History (not functional at the moment)");
     Console.WriteLine("E. Exit");
     Console.Write("> ");
     Console.ResetColor();
