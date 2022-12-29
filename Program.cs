@@ -80,7 +80,7 @@ void Power()
     Console.Write("Power: ");
     num2 = double.Parse(Console.ReadLine());
     result = Math.Pow(num1, num2);
-    Console.WriteLine($"{num1} × {num2} = {result}");
+    Console.WriteLine($"{num1} ^ {num2} = {result}");
     numGames++;
     MainMenu();
 }
